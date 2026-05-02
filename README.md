@@ -19,7 +19,7 @@ cd api-firebase-tdtt
 # Đối với Windows:
 python -m venv .venv
 .venv\Scripts\activate
-
+```
 **Bước 3:** Cài đặt các thư viện cần thiết:
 ```bash
 pip install -r requirements.txt
@@ -45,37 +45,4 @@ streamlit run app.py
 
 ---
 
-## 5. Cấu trúc thư mục dự án
-project_root/
-├── backend/
-│   ├── app/
-│   │   ├── core/
-│   │   │   └── firebase_config.py      # Cấu hình Firebase (chỉ dùng để xác thực đăng nhập)
-│   │   ├── db/                         # Thư mục mới: Quản lý cơ sở dữ liệu SQL
-│   │   │   ├── database.py             # Cấu hình và khởi tạo kết nối SQL (SQLAlchemy bằng Python)
-│   │   │   └── models.py               # Định nghĩa các bảng SQL (VD: Users, ChatHistory, Restaurants)
-│   │   ├── dependencies/
-│   │   │   └── auth.py                 # Các dependency kiểm tra token người dùng từ Firebase
-│   │   ├── routers/
-│   │   │   ├── auth.py                 # Các endpoint API cho đăng nhập/đăng xuất
-│   │   │   └── chat.py                 # Các endpoint API xử lý chat và gợi ý quán
-│   │   ├── schemas/
-│   │   │   ├── auth.py                 # Pydantic models kiểm tra dữ liệu đầu vào/ra của Auth
-│   │   │   └── chat.py                 # Pydantic models kiểm tra dữ liệu đầu vào/ra của Chat
-│   │   ├── services/
-│   │   │   ├── db_service.py           # Chứa các hàm xử lý logic thao tác với SQL (thêm, sửa, xóa, lấy dữ liệu)
-│   │   │   └── ai_service.py          # Logic kết nối với GEMINI bằng Python
-│   │   └── main.py                     # File gốc khởi tạo ứng dụng FastAPI
-│   │
-│   ├── database/                       # Thư mục chứa script và dữ liệu mẫu
-│   │   ├── data.sql                    # Dữ liệu quán ăn (SQL)
-│   │   └── seed.py                     # Script nạp dữ liệu vào CSDL (Được gọi tự động khi khởi chạy main.py)
-│   └── chatbot.db                      # File cơ sở dữ liệu vật lý (nếu bạn dùng SQLite, nằm ngang cấp với thư mục app)
-│
-├── frontend/                           # Thư mục giao diện tách biệt hoàn toàn
-│   ├── api_client.py                   # Các hàm Python tiện ích gửi request HTTP tới backend
-│   └── app.py                          # Mã nguồn giao diện chính (chạy bằng Streamlit)
-│
-├── .gitignore                          # Bỏ qua các file không đưa lên GitHub (vd: chatbot.db, thư mục __pycache__, serviceAccountKey.json)
-├── requirements.txt                    # Khai báo các thư viện Python cho toàn dự án
-└── README.md                           # Tài liệu hướng dẫn cài đặt và chạy dự án
+
