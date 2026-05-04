@@ -2,7 +2,7 @@
 Bài thực hành số 2 - APPLICATION PROGRAMMING INTERFACE AND FIREBASE STUDIO
 
 ## 1. Video Demo
-**[ Nhấn vào đây để xem Video Demo của nhóm](#)** *(Lưu ý: Bạn hãy thay dấu `#` bằng link YouTube/Google Drive của bạn)*
+**[ Nhấn vào đây để xem Video Demo](https://drive.google.com/file/d/1WscuroW_I4bLo1AM4v0qiaTQ99c-Qeuz/view?usp=sharing)** 
 
 ---
 
@@ -44,5 +44,3 @@ streamlit run app.py
 ```
 
 ---
-
-
